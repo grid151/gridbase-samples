@@ -1,1 +1,1 @@
-# gridbase-samples
+# GridBase sample projects
