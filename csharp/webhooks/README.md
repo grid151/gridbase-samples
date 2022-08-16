@@ -1,4 +1,4 @@
-# GridBase Web Hook samples
+# Configuring Web Hooks
 
 To get started with receiving web hook calls / notifications from GridBase, begin by signing into gridbase itself starting with the sandbox environment: https://app.sandbox.gridbase.io. Once signed in, click the Developer menu at the top, and click Web Hooks. For each web hook you wish to utilize, you will need to configure it in GridBase like:
 
