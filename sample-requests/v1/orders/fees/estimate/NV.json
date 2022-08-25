@@ -1,0 +1,13 @@
+{
+     "TransactionTypeId" : 42,
+     "ProductTypeId": 162, 
+     "City": "Las Vegas", 
+     "County": "Clark", 
+     "State": "NV", 
+     "LoanAmount": 500000, 
+     "SalesPrice": 500000, 
+     "OriginalDebtAmount": "500000", 
+     "UnpaidPrincipleAmount": 500000, 
+     "ReissueData": null,
+     "Endorsements": null
+}
