@@ -22,6 +22,21 @@ public class WebhookController : ControllerBase
     #endregion
 
     #region Web Hook Endpoints / Methods
+    [HttpPut]
+    [Route("OrderPlaced")]
+    public IActionResult OrderPlaced(OrderPlacedData input)
+    {
+        //TODO: Update the second argument when calling VerifySignature to match the Secret Key configured for this endpoint in GridBase / Developer / Web Hooks
+        if (!VerifySignature(input, "********************************************"))
+        {
+            return Unauthorized();
+        }
+
+        //TODO: Add your business logic here.
+
+        return Ok("Success");
+    }
+
     /// <summary>Called by GridBase when a action is triggered on an order.</summary>
     /// <param name="input">Object containing information about the action which was triggered.</param>
     /// <returns>Returns a string indicating success when the call completes without issue</returns>
