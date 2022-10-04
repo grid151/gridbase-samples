@@ -1,13 +1,15 @@
 {
      "TransactionTypeId" : 42,
-     "ProductTypeId": 162, 
-     "City": "Austin", 
-     "County": "Austin", 
-     "State": "TX", 
-     "LoanAmount": 500000, 
-     "SalesPrice": 500000, 
-     "OriginalDebtAmount": "500000", 
-     "UnpaidPrincipleAmount": 500000, 
-     "ReissueData": null,
-     "Endorsements": null
+     "ProductTypeId": 162,
+     "SettlementStatementVersion": "CD",
+     "City": "Austin",
+     "County": "Austin",
+     "State": "TX",
+     "Zip": "78733",
+     "LoanAmount": 500000,
+     "LoanType": "FHA",
+     "SalesPrice": 500000,
+     "OriginalDebtAmount": "500000",
+     "UnpaidPrincipleAmount": 500000,
+     "Endorsements": []
 }
