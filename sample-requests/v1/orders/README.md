@@ -14,7 +14,7 @@ GridBase requires you to stage an order before submitting it for placement with 
 
 To request order placement, begin by submitting PUT request to `/v1/orders/place/{orderId}`. This step will first validate the order staged to ensure it is ready to be submitted to the system. Assuming validation passes, Gridbase will then queue the order for placement and return success. To receive the result of order placement, you will need to either view the order in the GridBase Portal and verify its status is submitted. Alternatively, you can configure a [Web Hook](https://github.com/grid151/gridbase-samples/tree/main/csharp/webhooks) to notify your system when an order was placed successfully or failed to be placed.
 
-## Step 5: Additional Interactions
+## Step 4: Additional Interactions
 
 Once the order is placed, you can begin with some basic interactions, including:
 
