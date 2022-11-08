@@ -27,7 +27,7 @@ Your system will be able to read the order and its most recent contents by submi
 New notes can be submitted to the order in the target system by submitting an HTTP PUT request to `/v1/notes/add/{orderId}` with a request body like:
 ```json
 {
-    "noteBody" : "I'm a hurrican survivor",
+    "noteBody" : "I'm a hurricane survivor",
     "noteSubject" : "I'm a survivor"
 }
 ```
