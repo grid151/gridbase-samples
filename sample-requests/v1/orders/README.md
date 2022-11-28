@@ -42,9 +42,11 @@ New documents can be submitted to the order in the target system by submitting a
     "Documents": [
         {
             "FileName": "testdoc.pdf",
-            "InternalOnly" : false,
-            "DocumentTypeID": 1025,
-            "DocumentBody": "Place your base-64 encoded document string here"
+            "DocumentTypeID": "1025",
+            "DocumentBody": "Place your base-64 encoded document string here",
+            "Extension": "pdf",
+            "DocumentName": "Hi! I'm a document name.",
+            "Description": "Hi! I'm a document"
         }] 
 }
 ```
