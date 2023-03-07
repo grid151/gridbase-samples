@@ -77,13 +77,17 @@ Here is a an [document upload request body](sample/document.json)
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
-| Test | This | Format |
-| Test A | New | Line |
-| Even | More | Testing |
+| noteSubject | Note Subject | string |
+| noteBody | Note Body | string |
 
-Request body example
+### Request body example
 
-Response body example
+```json
+{
+  "noteSubject": "<string>",
+  "noteBody": "<string>",
+  "description": "<string>"
+}
 
 ## Cancel Order
 
