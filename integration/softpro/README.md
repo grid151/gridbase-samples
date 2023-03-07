@@ -88,6 +88,7 @@ Here is a an [document upload request body](sample/document.json)
   "noteBody": "<string>",
   "description": "<string>"
 }
+```
 
 ## Cancel Order
 
@@ -105,3 +106,4 @@ Here is a an [document upload request body](sample/document.json)
     "orderId": "63fd1cdb721cc7dd9a443413",
     "cancelReason": "Test Cancel"
 }
+```
