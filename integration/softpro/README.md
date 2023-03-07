@@ -19,7 +19,7 @@ This README file describes several API endpoints for integrating with SoftPro, a
 |---|---|---|
 | orderDetails.ProductTypeDesc | Products Available to order | string |
 | orderDetails.transactionTypeDesc | Transaction Type | string |
-| Even Field Name TBD by SoftPro | Per SoftPro, they will add a Description field if 'Other' selected for Loan Type | string |
+| Loan Type | Per SoftPro, they will add a Description field if 'Other' selected for Loan Type | string |
 | parties.buyers.lastName | Buyers Last Name | string |
 | parties.buyers.firstName | Buyers First Name | string |
 | parties.lender.companyName | Lender Company Name | string |
@@ -46,7 +46,7 @@ Here is a an [example request body](sample/order.json)
 |---|---|---|
 | orderDetails.ProductTypeDesc | Products Available to order | string |
 | orderDetails.transactionTypeDesc | Transaction Type | string |
-| Even Field Name TBD by SoftPro | Per SoftPro, they will add a Description field if 'Other' selected for Loan Type | string |
+| Loan Type | Per SoftPro, they will add a Description field if 'Other' selected for Loan Type | string |
 | parties.buyers.lastName | Buyers Last Name | string |
 | parties.buyers.firstName | Buyers First Name | string |
 | parties.lender.companyName | Lender Company Name | string |

@@ -1,25 +1,16 @@
 {
+    "DestinationIntegrationId": "63daba699b75f842622674df",
+    "SourceIntegrationId": "63daba699b75f842622674df",
     "Note": "March 3rd Loan Data Another One",
     "Notes": [],
     "Documents": [],
-    "OpenedBy": null,
-    "OpenedDate": null,
     "OrderDetails": {
-        "AdditionalAmount": "0.0",
-        "EarnestMoney": null,
         "ClientFileNumber": "imamu-test-03032023_04",
-        "ClientId": null,
         "EstimatedSettlementDate": "2023-11-17T05:00:00.000Z",
-        "IsAllPartiesAttending": false,
-        "IsSectionStarted": false,
-        "IsValidated": false,
         "NewLoanAmount": "850000.00",
-        "NewLoanNumber": null,
         "ProductTypeDesc": "Escrow only",
-        "ProductTypeId": 0,
         "SalesPrice": "75000.0",
         "TransactionTypeDesc": "Escrow only",
-        "TransactionTypeId": 0
     },
     "Parties": {
         "Buyers": [
@@ -239,21 +230,8 @@
         "PropertyType": "Single Family",
         "PropertyUse": "Residential"
     },
-    "Status": "Failed",
-    "Actions": null,
-    "Curatives": null,
-    "Coordinators": null,
-    "Signings": null,
-    "LastAudit": 0,
-    "DateTimeCompleted": null,
-    "DateTimeUpdated": null,
-    "CanceledBy": null,
-    "CanceledDate": null,
-    "CancelReason": null,
     "ModifiedBy": "",
     "System": "Softpro",
     "Product": "order",
-    "Milestones": null,
-    "DestinationIntegrationId": "{{Destination Integration ID}}",
-    "SourceIntegrationId": "{{ Source Integration ID }}"
+    "Milestones": null
 }
