@@ -17,17 +17,17 @@
 
 Required (Yes/No) Additional description if requirement is conditional.
 
-Request body example
+### Request body example
 
-Response body example
+Here is a an [example request body](sample/order.json)
+
 
 # Update Order
 
 ## Required fields
 
-> 
-> Updates will take the full order, anything left null should not replace an existing value.  (Will confirm with SoftPro)
->
+> Updates will take the full order, anything left null should not replace an existing value.  (**Will confirm with SoftPro**)
+
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
@@ -43,10 +43,8 @@ Response body example
 | property.address.zip | Property Zip | string |
 
 
+Here is a an [example request body](sample/order.json)
 
-Request body example
-
-Response body example
 
 # Add Document
 
@@ -54,13 +52,11 @@ Response body example
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
-| Test | This | Format |
-| Test A | New | Line |
-| Even | More | Testing |
+| fileName | Name of file without extension | string |
+| documentBody | Document as a Base64 string | string |
+| extension | extenstion of the uploaded file txt, pdf, etc | string |
 
-Request body example
-
-Response body example
+Here is a an [document upload request body](sample/document.json)
 
 # Add Note
 
@@ -82,10 +78,15 @@ Response body example
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
-| Test | This | Format |
-| Test A | New | Line |
-| Even | More | Testing |
+| orderId | unique identifier of the order | string |
+| cancelReason | Reason for cancelling order | string |
 
-Request body example
+### Request body example
+
+```json
+{
+    "orderId": "63fd1cdb721cc7dd9a443413",
+    "cancelReason": "Test Cancel"
+}
 
 Response body example
