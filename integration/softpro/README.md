@@ -1,4 +1,4 @@
-#SoftPro Integration
+# SoftPro Integration
 
 This README file describes several API endpoints for integrating with SoftPro, a real estate and title insurance software company. The file provides detailed information on the required fields for each endpoint.
 
@@ -11,9 +11,9 @@ This README file describes several API endpoints for integrating with SoftPro, a
 - [Cancel Order](#cancel-order)
 
 
-# Place Order
+## Place Order
 
-## Required fields
+### Required fields
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
@@ -35,9 +35,9 @@ Required (Yes/No) Additional description if requirement is conditional.
 Here is a an [example request body](sample/order.json)
 
 
-# Update Order
+## Update Order
 
-## Required fields
+### Required fields
 
 > Updates will take the full order, anything left null should not replace an existing value.  (**Will confirm with SoftPro**)
 
@@ -59,9 +59,9 @@ Here is a an [example request body](sample/order.json)
 Here is a an [example request body](sample/order.json)
 
 
-# Add Document
+## Add Document
 
-## Required fields
+### Required fields
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
@@ -71,9 +71,9 @@ Here is a an [example request body](sample/order.json)
 
 Here is a an [document upload request body](sample/document.json)
 
-# Add Note
+## Add Note
 
-## Required fields
+### Required fields
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
@@ -85,9 +85,9 @@ Request body example
 
 Response body example
 
-# Cancel Order
+## Cancel Order
 
-## Required fields
+### Required fields
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
