@@ -103,7 +103,7 @@ Here is a an [document upload request body](sample/document.json)
 
 ```json
 {
-    "orderId": "63fd1cdb721cc7dd9a443413",
+    "orderId": "63f---------------443413",
     "cancelReason": "Test Cancel"
 }
 ```
