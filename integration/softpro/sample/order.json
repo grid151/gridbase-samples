@@ -254,6 +254,6 @@
     "System": "Softpro",
     "Product": "order",
     "Milestones": null,
-    "DestinationIntegrationId": "63daba699b75f842622674df",
-    "SourceIntegrationId": "63daba699b75f842622674df"
+    "DestinationIntegrationId": "{{Destination Integration ID}}",
+    "SourceIntegrationId": "{{ Source Integration ID }}"
 }
