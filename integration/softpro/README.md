@@ -1,3 +1,16 @@
+#SoftPro Integration
+
+This README file describes several API endpoints for integrating with SoftPro, a real estate and title insurance software company. The file provides detailed information on the required fields for each endpoint.
+
+## Table of Contents
+
+- [Place Order](#place-order)
+- [Update Order](#update-order)
+- [Add Document](#add-document)
+- [Add Note](#add-note)
+- [Cancel Order](#cancel-order)
+
+
 # Place Order
 
 ## Required fields
@@ -88,5 +101,3 @@ Response body example
     "orderId": "63fd1cdb721cc7dd9a443413",
     "cancelReason": "Test Cancel"
 }
-
-Response body example
