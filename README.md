@@ -20,7 +20,7 @@ Place this token in the bearer token haeder in your tool of choice (such as Post
 - [Fee Estimates](https://github.com/grid151/gridbase-samples/tree/main/sample-requests/v1/orders/fees/estimate)
 - [Web Hooks](https://github.com/grid151/gridbase-samples/tree/main/csharp/webhooks)
 - Integrations
-  - [GridBase Decision Reports](https://github.com/grid151/gridbase-samples/integration/decision-reports)
+  - [GridBase Decision Reports](https://github.com/grid151/gridbase-samples/tree/main/integration/decision-reports)
   - [Softpro](https://github.com/grid151/gridbase-samples/tree/main/integration/softpro)
 
 
