@@ -40,7 +40,7 @@ Once order placement has completed, you may submit a GET request to `/v1/core/re
 }
 ```
 
-## Orderb Updates or Corrections:
+## Order Updates or Corrections:
 
 To update an existing order, submit an HTTP POST request to `/v1/orders/update` using the [example request](01_stage.json) where the main difference between the stage is the ID field is populated. This will return a 200 (successful) response with the order object you submitted.
 
