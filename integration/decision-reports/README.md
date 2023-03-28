@@ -52,3 +52,9 @@ Supported formats include `pdf` and `xml`.
 
 - `xml` - provides raw report data as an XML document, which may be used to implement process automation. 
 - `pdf` - provides a pre-formatted, print-friendly PDF document.
+
+## Updates or Corrections: Update and Place the Order again.
+
+To update an existing order, submit an HTTP POST request to `/v1/orders/update` using the [example request](01_stage.json) where the main difference between the stage is the ID field is populated. This will return a 200 (successful) response with the order object you submitted.
+
+Once the order has been updated, step 2 can be repeated for an updated report.
