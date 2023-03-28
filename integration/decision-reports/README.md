@@ -54,7 +54,7 @@ Supported formats include `pdf` and `xml`.
 - `pdf` - provides a pre-formatted, print-friendly PDF document.
 
 
-## Step 3 (optionalo): Order Updates or Corrections
+## Step 3 (optional): Order Updates or Corrections
 
 To update an existing order, submit an HTTP POST request to `/v1/orders/update` using the [example request](01_update.json) where the main difference between the stage is the ID field is populated. This will return a 200 (successful) response with the order object you submitted.
 
