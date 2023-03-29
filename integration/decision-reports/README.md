@@ -17,6 +17,7 @@ To stage a new order, submit an HTTP POST request to `/v1/orders/stage` using th
 | `orderDetails.salesPrice` | The sale price of the property | &check; |
 | `orderDetails.transactionTypeDesc` | The type of transaction (e.g. "Purchase Loan", "Purchase Cash", "Refinance", etc..) | &check; |
 | `parties.buyers[].lastName` | Buyers Last Name | &check; |
+| `parties.buyers[].MiddleName` | Buyers Middle Name | &check; |
 | `parties.buyers[].firstName` | Buyers First Name | &check; |
 | `parties.lender.companyName` | Lender Company Name | &check; |
 | `property.address.street` | Property Address 1 | &check; |
