@@ -31,6 +31,17 @@ To stage a new order, submit an HTTP POST request to `/v1/orders/stage` using th
 
 Once the order is staged, you may then submit a PUT request to `/v1/orders/place/{id}` (where `{id}` is replaced with the order ID returned from the previous request). Note that order placement may take some time to complete
 
+Transaction Types Supported:
+| Transaction Type |
+| --- |
+| 'EquityNC' |
+| 'EquityLV' |
+| 'EquityLastDeed' |
+| 'EquityLastDeedOrLoan' |
+| 'Refinance' |
+| 'Equity' |
+| 'EquityPR' |
+
 ## Step 2: Retrieve the Report
 
 Once order placement has completed, you may submit a GET request to `/v1/core/reports/generate` with the following request body to generate a report:
