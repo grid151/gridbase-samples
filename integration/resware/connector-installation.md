@@ -6,8 +6,6 @@ installing this Resware Connector in your organization's Resware environment.
 # Recommended Tools
 
 - A source code / text editor, such as Notepad++, Visual Studio Code, etc...
-- Viewer or browser extension for viewing Markdown documents (including this guide) with support for Mermaid
-  diagrams. [Chrome](https://chrome.google.com/webstore/detail/markdown-viewer/ckkdlimhmcjmikdlpkmbgfkaikojcbjk?hl=en-US) | [Firefox](https://addons.mozilla.org/en-US/firefox/addon/markdown-viewer-chrome/)
 
 # System Requirements
 
