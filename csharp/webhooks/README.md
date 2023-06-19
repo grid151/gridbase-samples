@@ -7,3 +7,11 @@ To get started with receiving web hook calls / notifications from GridBase, begi
 Once complete, copy the secret key generated, and paste it in place of the asterisks in the corresponding endpoint's sample code, which looks something like: `VerifySignature(input, "********************************************")`.
 
 You will need to then build and publish the project to a server which may be reached by GridBase servers (via HTTPS). Presently direct communication with Grid151 staff will be necessary to trigger the tests from GridBase.
+
+## Example Data
+
+Examples for web hook data posted is also available in raw JSON (rather than just the C# models) as follows:
+- [Order Placed](example-order-placed.json)
+- [Note Added](example-note.json)
+- [Document Added](example-document.json)
+- [Action Event Triggered](example-action.json)
