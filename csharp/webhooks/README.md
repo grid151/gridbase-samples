@@ -13,5 +13,5 @@ You will need to then build and publish the project to a server which may be rea
 Examples for web hook data posted is also available in raw JSON (rather than just the C# models) as follows:
 - [Order Placed](example-order-placed.json)
 - [Note Added](example-note.json)
-- [Document Added](example-document.json)
+- [Document Added](example-document-added.json)
 - [Action Event Triggered](example-action.json)
