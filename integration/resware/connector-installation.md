@@ -35,7 +35,7 @@ minimize web-facing attack surface. The required traffic patterns are as follows
   GridBase, Grafana, and AWS S3 resources.
 - The Connector App Server must **only** receive inbound https requests from the Connector Web Server; and it must be
   able to make outbound requests to Resware's Web Server (https), the Connector's Web Server (https), and to the Resware
-  database server (mssql).
+  database server (mssql). The Connector App Server must have access to the SMB/Windows File Share(s) used by Resware.
 
 ## Simple
 
