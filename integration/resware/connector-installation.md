@@ -125,6 +125,16 @@ add this login as a database user. This user will need permissions to:
 - Execute stored procedures on the GridBase database **and** on the Resware database.
 - Configure Resware database permissions as specified below...
 
+### Stored Procedure Execute Privilege
+Ths simplest way to grant GridBase the necessary execute priveleges is to create a role as follows:
+
+```sql
+CREATE ROLE dbGridBaseExec
+GRANT EXECUTE ON SCHEMA::dbo to dbGridBaseExec
+```
+
+Once done, you can apply the role to mapped user on each (`Resware` and `GridBase`) database.
+
 ### Resware Database Table Permissions
 
 | Table Name                        | Select  | Insert  | Update  | Delete  |
