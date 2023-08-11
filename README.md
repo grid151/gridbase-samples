@@ -17,7 +17,7 @@ Place this token in the bearer token haeder in your tool of choice (such as Post
 # Developer Guides and Samples
 
 - [Orders](https://github.com/grid151/gridbase-samples/tree/main/sample-requests/v1/orders)
-- [Fee Estimates](https://github.com/grid151/gridbase-samples/tree/main/sample-requests/v1/orders/fees/estimate)
+- [Fee Estimates](https://github.com/grid151/gridbase-samples/blob/main/integration/fee-estimates)
 - [Web Hooks](https://github.com/grid151/gridbase-samples/tree/main/csharp/webhooks)
 - Integrations
   - [GridBase Decision Reports](https://github.com/grid151/gridbase-samples/tree/main/integration/decision-reports)
