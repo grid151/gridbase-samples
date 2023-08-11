@@ -1,14 +1,14 @@
-# Fee Estimate Integration
+# Integration Guide for GridBase Fee Estimates
 
-This README file describes several API endpoints for interagrating with Fee Estimates, a tool for getting an estimation for specific properties based on a specific set of requirements. The file provides detailed information on the required fields for each endpoint.
+This document outlines various API endpoints designed for seamless integration with GridBase Fee Estimates, a powerful tool that offers estimation based on a property and user-provided requirements. Below, you'll find comprehensive insights into the essential fields associated with each individual endpoint. Feel free to refer to this guide as you embark on integrating Fee Estimates into your system. It will ensure a smooth and successful integration process.
 
 ## Table of Contents
 
-All of the following endpoints are GET request except for the "Request Quote" endpoint which is a POST request. All of the GET request can be used as helpers in order to properly fill out you request for a quote.
+All of the following endpoints are HTTP `GET` requests except for the "Request Quote" endpoint which is an HTTP `POST` request. All of the `GET` requests can be used as helpers in order to properly fill out you request for an estimate.
 
 - [Get Fee Standards](#get-fee-standards)
 - [Get Questions](#get-questions)
-- [Request Quote](#request-quote)
+- [Request Estimate](#request-estimate)
 
 ## Get Fee Standards
 
@@ -60,7 +60,7 @@ All of the following endpoints are GET request except for the "Request Quote" en
 ]
 ```
 
-## Request Quote
+## Request Estimate
 
 ### Required Fields
 
