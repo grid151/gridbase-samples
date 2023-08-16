@@ -12,6 +12,12 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
 
 ## Get Fee Standards
 
+`GET /v1/orders/fees/fee-standards/{feeType}/{state}/{integrationId}`
+
+#### Example
+
+`GET /v1/orders/fees/fee-standards/Endorsement/FL/kljsldfjdljfldkjfl`
+
 ### Response Body Example
 
 ```json
@@ -41,6 +47,12 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
 
 ## Get Questions
 
+`GET /v1/orders/fees/questions/{stateAbbreviation}/{countyFips}/{documentType}/{integrationId}`
+
+#### Example
+
+`GET /v1/orders/fees/questions/PA/PA005/Refinance/jlekjljrlewjrlkj`
+
 ### Response Body Example
 
 ```json
@@ -61,6 +73,8 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
 ```
 
 ## Request Estimate
+
+`POST /quote`
 
 ### Required Fields
 
