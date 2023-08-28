@@ -47,11 +47,27 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
 
 ## Get Questions
 
-`GET /v1/orders/fees/questions/{stateAbbreviation}/{countyFips}/{documentType}/{integrationId}`
+`POST /v1/orders/fees/questions`
 
-#### Example
+### Required Fields
 
-`GET /v1/orders/fees/questions/PA/PA005/Refinance/jlekjljrlewjrlkj`
+| Field Name        | Field Description                  | Data Type |
+| ----------------- | ---------------------------------- | --------- |
+| stateAbbreviation | Two character state abbreviation   | string    |
+| countyFips        | Fips code for the county           | string    |
+| documentTypes     | Document Types Refinance, Mortgage | string    |
+| integrationId     | Clients unique integration Id      | string    |
+
+### Request Body Example
+
+```json
+{
+  "stateAbbreviation": "PA",
+  "countyFips": "42007",
+  "documentTypes": ["Refinance"],
+  "integrationId": "12345"
+}
+```
 
 ### Response Body Example
 
@@ -74,7 +90,7 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
 
 ## Request Estimate
 
-`POST /quote`
+`POST /v1/orders/fees/quote`
 
 ### Required Fields
 
@@ -92,11 +108,11 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
 
 ### Request Body Example
 
-```json
+````json
 {
-  "IntegrationId": "123456",
+  "IntegrationId": "12345",
   "EstimatedClosingDate": "2023-08-10T15:30:00Z",
-  "DocumentType": "Mortgage",
+  "DocumentTypes": ["Mortgage"],
   "InspectionService": {
     "Address": "123 Main St",
     "City": "Sample City",
@@ -137,9 +153,8 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
     "PowerOfAttorney": { "Pages": null, "Amount": 50 }
   },
   "Questions": [
-    { "Id": "Q1", "Answer": "Yes", "QuestionType": "Boolean" },
-    { "Id": "Q2", "Answer": "12345", "QuestionType": "Number" },
-    { "Id": "Q3", "Answer": "Sample answer", "QuestionType": "Text" }
+    { "Id": "Q1", "Answer": "Yes", "QuestionType": "Bool" },
+    { "Id": "Q2", "Answer": "12345", "QuestionType": "Number" }
   ],
   "TitleAgent": {
     "TitleVendor": "Sample Title Company",
@@ -153,5 +168,5 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
   "TransactionType": "Purchase",
   "UseItemizedSettlementFees": true,
   "Endorsements": ["Endorsement1", "Endorsement2"]
-}
-```
+}```
+````

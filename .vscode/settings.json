@@ -1,0 +1,3 @@
+{
+  "dotnet.defaultSolution": "csharp/webhooks/aspdotnet6/GridBaseWebhookExample.sln"
+}
