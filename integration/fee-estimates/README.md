@@ -168,5 +168,6 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
   "TransactionType": "Purchase",
   "UseItemizedSettlementFees": true,
   "Endorsements": ["Endorsement1", "Endorsement2"]
-}```
+}
+```
 ````
