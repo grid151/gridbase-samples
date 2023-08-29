@@ -108,7 +108,7 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
 
 ### Request Body Example
 
-````json
+```json
 {
   "IntegrationId": "12345",
   "EstimatedClosingDate": "2023-08-10T15:30:00Z",
@@ -170,4 +170,3 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
   "Endorsements": ["Endorsement1", "Endorsement2"]
 }
 ```
-````
