@@ -13,8 +13,8 @@ installing this Resware Connector in your organization's Resware environment.
 - 4GB RAM minimum (8GB or better recommended)
 - Windows Server 2019 or later
     - Internet Information Systems (IIS)
-    - Valid TLS/SSL certificates signed by a trusted Certificate Authority (CA) must be present and configured for
-      Resware servers and Connector servers.
+    - Valid TLS/SSL certificates **signed by a trusted Certificate Authority (CA)** must be present and configured for
+      Resware servers and each Connector server.
     - Resware Web Servers must support TLS 1.2, and configured to allow a cipher-chain supported by the version of
       Windows Server being used by the connector servers.
     - Connector servers must support TLS 1.2 and optionally higher versions as well. Earlier versions of TLS and SSL
@@ -24,6 +24,7 @@ installing this Resware Connector in your organization's Resware environment.
       issuance to approved Certificate Authorities.
 - Microsoft SQL Server (MSSQL) 2019 or later
     - SQL Server Management Studio (SSMS)
+    - On the same MSSQL server and instance where the Resware database resides, a GridBase database must also be created. (Additional configuration steps are below.)
 
 # Planning
 
@@ -69,6 +70,8 @@ flowchart LR
 ```
 
 # Web Server Configuration
+
+**NOTE: This configuration applies to both the web connector server and the app connector server.**
 
 In Windows Server, open the Server Manager application and click **Add roles and features**. Click **Next** until you
 reach the **Server Roles** screen, expand the **Web Server** role, and make sure the following options:
