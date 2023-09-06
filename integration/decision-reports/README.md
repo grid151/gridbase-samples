@@ -44,7 +44,7 @@ Transaction Types Supported:
 
 ## Step 2: Retrieve the Report
 
-Once order placement has completed, you may submit a GET request to `/v1/core/reports/generate` with the following request body to generate a report:
+Once order placement has completed, you may submit a `POST` request to `/v1/core/reports/generate` with the following request body to generate a report:
 
 ```json
 {
