@@ -24,7 +24,7 @@ To stage a new order, submit an HTTP POST request to `/v1/orders/stage` using th
 | `property.address.cityDesc` | Property City/Locality Description | &check; |
 | `property.address.stateId` | Property State | &check; |
 | `property.address.zip` | Property Zip/Postal Code | &check; |
-| `IntegrationId` | '6376739ba629905cda6d12d1' | &check; |
+| `IntegrationId` | `63d3262502157e71998e997b` (for Sandbox environment only) | &check; |
 | `Product` | 'decision-report' | &check; |
 
 
