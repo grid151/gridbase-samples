@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "c5fa5d12-0676-4abf-9208-6641b6602a3a",
+		"name": "GridBase Instant Decision",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23795965",
+		"_collection_link": "https://interstellar-comet-785364.postman.co/workspace/GridBase~fd9c982f-4ad7-4719-b461-e86815a7628c/collection/23795965-c5fa5d12-0676-4abf-9208-6641b6602a3a?action=share&source=collection_link&creator=23795965"
+	},
+	"item": [
+		{
+			"name": "stage",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"postman.setEnvironmentVariable(\"orderId\", jsonData.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"integrationId\": \"63d3262502157e71998e997b\",\r\n    \"orderDetails\": {\r\n        \"clientFileNumber\": \"EX0008\",\r\n        \"newLoanAmount\": 554321,\r\n        \"newLoanNumber\": \"EX0008\",\r\n        \"salesPrice\": 654321,\r\n        \"transactionTypeDesc\": \"EquityNC\"\r\n    },\r\n    \"parties\": {\r\n        \"buyers\": [\r\n            {\r\n                \"firstName\": \"Fred\",\r\n                \"middleName\": \"Fred\",\r\n                \"lastName\": \"Burger\"\r\n            }\r\n        ],\r\n        \"contacts\": [],\r\n        \"lender\": {\r\n            \"companyName\": \"Bank of America\"\r\n        },\r\n        \"sellers\": []\r\n    },\r\n    \"product\": \"decision-report\",\r\n    \"property\": {\r\n        \"address\": {\r\n            \"cityDesc\": \"Bakersfield\",\r\n            \"countyDesc\": \"Kern\",\r\n            \"number\": \"3518\",\r\n            \"stateId\": \"CA\",\r\n            \"street\": \"3518 Kaibab Ave\",\r\n            \"streetName\": \"Kaibab Ave\",\r\n            \"zip\": \"93306\"\r\n        },\r\n        \"propertyType\": \"Single Family\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app.sandbox.gridbase.io/v1/orders/stage",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sandbox",
+						"gridbase",
+						"io"
+					],
+					"path": [
+						"v1",
+						"orders",
+						"stage"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "place",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "generate-report",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"postman.setEnvironmentVariable(\"reportUrl\", responseBody);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"orderId\": \"{{orderId}}\",\r\n    \"reportId\": \"6324d73af55f885d0d71b6a4\",\r\n    \"reportFormat\": \"xml\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://app.sandbox.gridbase.io/v1/core/reports/generate",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sandbox",
+						"gridbase",
+						"io"
+					],
+					"path": [
+						"v1",
+						"core",
+						"reports",
+						"generate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "view-report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{reportUrl}}",
+					"host": [
+						"{{reportUrl}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
