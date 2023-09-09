@@ -53,10 +53,10 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
 
 | Field Name        | Field Description                  | Data Type |
 | ----------------- | ---------------------------------- | --------- |
-| stateAbbreviation | Two character state abbreviation   | string    |
-| countyFips        | Fips code for the county           | string    |
-| documentTypes     | Document Types Refinance, Mortgage | string    |
-| integrationId     | Clients unique integration Id      | string    |
+| `stateAbbreviation` | Two character state abbreviation   | string    |
+| `countyFips`        | Fips code for the county           | string    |
+| `documentTypes`     | Document Types Refinance, Mortgage | string    |
+| `integrationId`     | Clients unique integration Id      | string    |
 
 ### Request Body Example
 
@@ -96,77 +96,77 @@ All of the following endpoints are HTTP `GET` requests except for the "Request Q
 
 | Field Name               | Field Description                                                                                                                 | Data Type |
 | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------- | --------- |
-| Property.Street          | Property Address                                                                                                                  | string    |
-| Property.CityDesc        | Property City                                                                                                                     | string    |
-| Property.StateId         | Property State                                                                                                                    | string    |
-| Property.CountyDesc      | Property County                                                                                                                   | string    |
-| Property.Zip             | Property Zip Code                                                                                                                 | string    |
-| TransacitionType         | Transaction Type (Purchase, Refinance, Modification)                                                                              | string    |
-| DocumentType             | Fee Document Type (None, Amendment, Assignment, Deed, Modification, Mortgage, PowerOfAttorney, Refinance, Release, Subordination) | string    |
-| TitleAgent.FinancingType | Finance Type (Sale, Refinance)                                                                                                    | string    |
-| TitleAgent.PolicyType    | Policy Type (New, Reissue)                                                                                                        | string    |
+| `property.street`          | Property Address                                                                                                                  | string    |
+| `property.cityDesc`        | Property City                                                                                                                     | string    |
+| `property.stateId`         | Property State                                                                                                                    | string    |
+| `property.countyDesc`      | Property County                                                                                                                   | string    |
+| `property.zip`             | Property Zip Code                                                                                                                 | string    |
+| `transacitionType`         | Transaction Type (Purchase, Refinance, Modification)                                                                              | string    |
+| `documentType`             | Fee Document Type (None, Amendment, Assignment, Deed, Modification, Mortgage, PowerOfAttorney, Refinance, Release, Subordination) | string    |
+| `titleAgent.financingType` | Finance Type (Sale, Refinance)                                                                                                    | string    |
+| `titleAgent.policyType`    | Policy Type (New, Reissue)                                                                                                        | string    |
 
 ### Request Body Example
 
 ```json
 {
-  "IntegrationId": "12345",
-  "EstimatedClosingDate": "2023-08-10T15:30:00Z",
-  "DocumentTypes": ["Mortgage"],
-  "InspectionService": {
-    "Address": "123 Main St",
-    "City": "Sample City",
-    "Zip": "12345",
-    "SquareFootage": 2000,
-    "YearBuilt": 2000,
-    "LotSize": 0.25,
-    "IsInspection": true,
-    "InspectionTypes": [
-      { "Key": "Mold", "Name": "Mold Inspection", "Value": true },
-      { "Key": "Asbestos", "Name": "Asbestos Inspection", "Value": false }
+  "integrationId": "12345",
+  "estimatedClosingDate": "2023-08-10T15:30:00Z",
+  "documentTypes": ["Mortgage"],
+  "inspectionService": {
+    "address": "123 Main St",
+    "city": "Sample City",
+    "zip": "12345",
+    "squareFootage": 2000,
+    "yearBuilt": 2000,
+    "lotSize": 0.25,
+    "isInspection": true,
+    "inspectionTypes": [
+      { "key": "Mold", "name": "Mold Inspection", "value": true },
+      { "key": "Asbestos", "name": "Asbestos Inspection", "value": false }
     ],
-    "NumberOfSamples": {
-      "MoldAirSamples": 2,
-      "MoldSurfaceSamples": 3,
-      "AsbestosSamples": 0,
-      "LeadPaintSamples": 1,
-      "DrywallSamples": 0
+    "numberOfSamples": {
+      "moldAirSamples": 2,
+      "moldSurfaceSamples": 3,
+      "asbestosSamples": 0,
+      "leadPaintSamples": 1,
+      "drywallSamples": 0
     }
   },
-  "Mortgage": {
-    "Pages": 15,
-    "NewDebtAmount": 250000,
-    "OriginalAmount": 300000,
-    "UnpaidBalance": 200000
+  "mortgage": {
+    "pages": 15,
+    "newDebtAmount": 250000,
+    "originalAmount": 300000,
+    "unpaidBalance": 200000
   },
-  "Property": {
-    "StreetAddress": "456 Elm St",
-    "City": "Sample City",
-    "State": "CA",
-    "Zip": "54321"
+  "property": {
+    "streetAddress": "456 Elm St",
+    "city": "Sample City",
+    "state": "CA",
+    "zip": "54321"
   },
-  "Customizations": {
-    "Assignment": { "Pages": 2, "Amount": 100 },
-    "Deed": { "Pages": 3, "Amount": 150 },
-    "Release": { "Pages": 1, "Amount": 75 },
-    "Subordination": { "Pages": null, "Amount": 200 },
-    "PowerOfAttorney": { "Pages": null, "Amount": 50 }
+  "customizations": {
+    "assignment": { "Pages": 2, "Amount": 100 },
+    "deed": { "Pages": 3, "Amount": 150 },
+    "release": { "Pages": 1, "Amount": 75 },
+    "subordination": { "Pages": null, "Amount": 200 },
+    "powerOfAttorney": { "Pages": null, "Amount": 50 }
   },
-  "Questions": [
-    { "Id": "Q1", "Answer": "Yes", "QuestionType": "Bool" },
-    { "Id": "Q2", "Answer": "12345", "QuestionType": "Number" }
+  "questions": [
+    { "id": "Q1", "answer": "Yes", "questionType": "Bool" },
+    { "id": "Q2", "answer": "12345", "questionType": "Number" }
   ],
-  "TitleAgent": {
-    "TitleVendor": "Sample Title Company",
-    "City": "Sample City",
-    "FinancingType": "Sale",
-    "PolicyType": "New",
-    "UseSimultaneousRates": true,
-    "LoanAmount": 200000,
-    "PurchaseAmount": 300000
+  "titleAgent": {
+    "titleVendor": "Sample Title Company",
+    "city": "Sample City",
+    "financingType": "Sale",
+    "policyType": "New",
+    "useSimultaneousRates": true,
+    "loanAmount": 200000,
+    "purchaseAmount": 300000
   },
-  "TransactionType": "Purchase",
-  "UseItemizedSettlementFees": true,
-  "Endorsements": ["Endorsement1", "Endorsement2"]
+  "transactionType": "Purchase",
+  "useItemizedSettlementFees": true,
+  "endorsements": ["Endorsement1", "Endorsement2"]
 }
 ```
