@@ -16,12 +16,11 @@ Place this token in the bearer token haeder in your tool of choice (such as Post
 
 # Developer Guides and Samples
 
-- [Orders](https://github.com/grid151/gridbase-samples/tree/main/sample-requests/v1/orders)
+- [Order Management](https://github.com/grid151/gridbase-samples/tree/main/sample-requests/v1/orders)
 - [Fee Estimates](https://github.com/grid151/gridbase-samples/blob/main/integration/fee-estimates)
+- [Instant Decision Reports](https://github.com/grid151/gridbase-samples/tree/main/integration/decision-reports)
 - [Web Hooks](https://github.com/grid151/gridbase-samples/tree/main/csharp/webhooks)
-- Integrations
-  - [GridBase Decision Reports](https://github.com/grid151/gridbase-samples/tree/main/integration/decision-reports)
+- TPS Integrations
   - [Softpro](https://github.com/grid151/gridbase-samples/tree/main/integration/softpro)
-
-
-
+  - Ramquest (available, guide coming soon!)
+  - [Resware Connector](https://github.com/grid151/gridbase-samples/edit/main/integration/resware/connector-installation.md)
