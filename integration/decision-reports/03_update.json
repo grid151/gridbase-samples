@@ -1,131 +1,69 @@
 {
-    "Id": "623b2d124e3195227be559f6",
-    "SourceFileID": null,
-    "SourceFileNumber": "X1_DR_332222",
-    "Note": null,
-    "Notes": null,
-    "Documents": null,
-    "OpenedBy": null,
-    "OpenedDate": null,
-    "OrderDetails": {
-        "AdditionalAmount": null,
-        "ClientFileNumber": "DR_332222",
-        "ClientId": 1829597,
-        "IsAllPartiesAttending": false,
-        "IsSectionStarted": false,
-        "IsValidated": false,
-        "NewLoanAmount": "400000.0",
-        "NewLoanNumber": "",
-        "ProductTypeDesc": null,
-        "ProductTypeId": 38,
-        "SalesPrice": 400000,
-        "TransactionTypeDesc": "Refinance",
-        "TransactionTypeId": 16
+    "id": "623b2d124e3195227be559f6",
+    "sourceFileNumber": "LOAN0001",
+    "orderDetails": {
+        "clientFileNumber": "LOAN0001",
+        "clientId": 23090001,
+        "newLoanAmount": "400000.0",
+        "newLoanNumber": "",
+        "productTypeId": 38,
+        "salesPrice": 400000,
+        "transactionTypeDesc": "EquityNC"
     },
-    "Parties": {
-      "Buyers": [
+    "parties": {
+      "buyers": [
             {
-                "Address": {
-                    "CityDesc": "Forked River",
-                    "CityId": null,
-                    "CountyDesc": "1201 Ariel, Forked River, NJ 08731",
-                    "CountyId": null,
-                    "Direction": null,
-                    "IsPropertyAddress": true,
-                    "LandAcreage": null,
-                    "Number": null,
-                    "StateDesc": "NJ",
-                    "StateId": "NJ",
-                    "Street": "1201 Ariel",
-                    "StreetLine2": null,
-                    "StreetName": "Ariel",
-                    "Suffix": null,
-                    "Unit": "",
-                    "Zip": "08731"
+                "address": {
+                    "cityDesc": "Forked River",
+                    "countyDesc": "1201 Ariel, Forked River, NJ 08731",
+                    "stateDesc": "NJ",
+                    "stateId": "NJ",
+                    "street": "1201 Ariel",
+                    "streetLine2": null,
+                    "streetName": "Ariel",
+                    "suffix": null,
+                    "unit": "",
+                    "zip": "08731"
                 },
-                "BusinessName": null,
-                "BuyerSellerType": "Individual",
-                "BuyerSellerTypeID": 1,
-                "Email": "example@some.domain",
-                "FirstName": "John",
-                "IsPrimary": true,
-                "IsSameAsPropertyAddress": null,
-                "IsValidated": false,
-                "LastName": "Smith",
-                "MaritalStatus": null,
-                "MiddleName": "E",
-                "Phone": "555-123-4567",
-                "Prefix": null,
-                "SocialSecurityNumber": null,
-                "SourceBuyerSellerID": null,
-                "Spouse": null,
-                "Suffix": null,
-                "TaxId": null
+                "buyerSellerType": "Individual",
+                "buyerSellerTypeID": 1,
+                "email": "example@some.domain",
+                "firstName": "John",
+                "isPrimary": true,
+                "lastName": "Smith",
+                "middleName": "E",
+                "phone": "555-123-4567"
             }
         ],
-        "IsSectionStarted": false,
-        "IsValidated": false,
-        "Lender": {
-            "PartyTypeId": 3,
-            "Address": {
-                "CityDesc": "Charlotte",
-                "CityId": null,
-                "CountyDesc": null,
-                "CountyId": null,
-                "Direction": null,
-                "IsPropertyAddress": true,
-                "LandAcreage": null,
-                "Number": null,
-                "StateDesc": "NC",
-                "StateId": "NC",
-                "Street": "4064 Colony Rd. Morrocroft 2",
-                "StreetLine2": null,
-                "StreetName": null,
-                "Suffix": null,
-                "Unit": "Floor 2",
-                "Zip": "28211"
+        "lender": {
+            "partyTypeId": 3,
+            "address": {
+                "cityDesc": "Charlotte",
+                "stateDesc": "NC",
+                "stateId": "NC",
+                "street": "4064 Colony Rd. Morrocroft 2",
+                "unit": "Floor 2",
+                "zip": "28211"
             },
-            "CompanyName": "Example Lender",
-            "ContactName": "Jane Doe",
-            "IsValidated": false,
+            "companyName": "Example Lender",
+            "contactName": "Jane Doe",
             "Phone": "123-456-7890"
         },
-        "ListingAgent": null,
-        "MortgageBroker": null,
-        "SecondLender": null,
-        "Sellers": [],
-        "SellingAgent": null
+        "sellers": [],
     },
-    "Partners": null,
-    "Property": {
-        "Address": {
-            "FullAddress": "1201 Ariel, Forked River, NJ 08731",
+    "property": {
+        "address": {
+            "fullAddress": "1201 Ariel, Forked River, NJ 08731",
             "cityDesc": "Forked River",
-            "cityId": null,
-            "countyDesc": null,
-            "countyId": null,
-            "direction": null,
-            "isPropertyAddress": true,
-            "landAcreage": null,
-            "number": "",
             "stateDesc": "NJ",
             "stateId": "NJ",
             "street": "11201 Ariel",
-            "streetLine2": null,
             "streetName": "1201 Ariel",
-            "suffix": null,
-            "unit": null,
             "zip": "08731"
         },
-        "IsKeyboxInfo": false,
-        "IsSectionStarted": true,
-        "IsUnincorporated": false,
-        "IsValidated": true,
-        "KeyboxInfo": null,
-        "PropertyType" : "Single Family"
+        "propertyType" : "Single Family"
     },
-    "Status": "Processing",
-    "System": "X1",
-    "Product": "decision-report",
-    "Milestones": []
+    "system": "X1",
+    "product": "decision-report",
+    "milestones": []
 }
