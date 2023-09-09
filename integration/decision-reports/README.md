@@ -1,6 +1,6 @@
-# GridBase Decision Reports
+# GridBase Instant Decision Reports
 
-GridBase Decision Reports (powered by X1 Analytics) allows lenders to close more quickly and determine the title condition (including "Clear to Close").
+GridBase Instant Decision Reports (powered by X1 Analytics) allows lenders to close more quickly and determine the title condition (including "Clear to Close").
 
 # API Guide
 
@@ -48,9 +48,9 @@ Once order placement has completed, you may submit a `POST` request to `/v1/core
 
 ```json
 {
-    "OrderId": "{id}",
-    "ReportId": "6324d73af55f885d0d71b6a4",
-    "ReportFormat": "pdf"
+    "orderId": "{id}",
+    "reportId": "6324d73af55f885d0d71b6a4",
+    "reportFormat": "pdf"
 }
 ```
 
