@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "c5fa5d12-0676-4abf-9208-6641b6602a3a",
+		"_postman_id": "1a5ed502-994e-4e6c-ad74-f5192b1642e6",
 		"name": "GridBase Instant Decision",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "23795965",
-		"_collection_link": "https://interstellar-comet-785364.postman.co/workspace/GridBase~fd9c982f-4ad7-4719-b461-e86815a7628c/collection/23795965-c5fa5d12-0676-4abf-9208-6641b6602a3a?action=share&source=collection_link&creator=23795965"
+		"_exporter_id": "12980103",
+		"_collection_link": "https://westcorintegration.postman.co/workspace/Westcor-Integration-Workspace~85db81b4-5656-4004-8f06-f2af6104c947/collection/12980103-1a5ed502-994e-4e6c-ad74-f5192b1642e6?action=share&source=collection_link&creator=12980103"
 	},
 	"item": [
 		{
@@ -33,7 +33,13 @@
 					]
 				},
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "X-GridBase-Integration",
+						"value": "63daba699b75f842622674df",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"integrationId\": \"63d3262502157e71998e997b\",\r\n    \"orderDetails\": {\r\n        \"clientFileNumber\": \"EX0008\",\r\n        \"newLoanAmount\": 554321,\r\n        \"newLoanNumber\": \"EX0008\",\r\n        \"salesPrice\": 654321,\r\n        \"transactionTypeDesc\": \"EquityNC\"\r\n    },\r\n    \"parties\": {\r\n        \"buyers\": [\r\n            {\r\n                \"firstName\": \"Fred\",\r\n                \"middleName\": \"Fred\",\r\n                \"lastName\": \"Burger\"\r\n            }\r\n        ],\r\n        \"contacts\": [],\r\n        \"lender\": {\r\n            \"companyName\": \"Bank of America\"\r\n        },\r\n        \"sellers\": []\r\n    },\r\n    \"product\": \"decision-report\",\r\n    \"property\": {\r\n        \"address\": {\r\n            \"cityDesc\": \"Bakersfield\",\r\n            \"countyDesc\": \"Kern\",\r\n            \"number\": \"3518\",\r\n            \"stateId\": \"CA\",\r\n            \"street\": \"3518 Kaibab Ave\",\r\n            \"streetName\": \"Kaibab Ave\",\r\n            \"zip\": \"93306\"\r\n        },\r\n        \"propertyType\": \"Single Family\"\r\n    }\r\n}",
@@ -69,13 +75,29 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "{{accessToken}}",
+							"value": "eyJraWQiOiJ0MTJXcEdrMjNzcnlnUkFBY0FpaG05a01KT3JxY3NMKzJQeElLTGpqc2ZZPSIsImFsZyI6IlJTMjU2In0.eyJzdWIiOiIyMTkwOWVlYi04MzAxLTQ2NTYtYjVjZS1lZWRjMWZjYjdkMDIiLCJpc3MiOiJodHRwczpcL1wvY29nbml0by1pZHAudXMtZWFzdC0yLmFtYXpvbmF3cy5jb21cL3VzLWVhc3QtMl9DNVZkc2pwckciLCJjbGllbnRfaWQiOiIxMTA1dWU2dmdxMTl0bHFoOGxuNnAxZzdjcyIsIm9yaWdpbl9qdGkiOiJiY2I3NDM1MC01MjU4LTQ2OGYtYWQ3ZC1mOWM3NTBlODNjMWIiLCJldmVudF9pZCI6IjJjZWNlZmY5LTJhMWYtNDllMC05MjA0LWIxMzQ4YjNlMzE5NiIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE2OTQ1MzI1OTEsImV4cCI6MTY5NDYxODk5MSwiaWF0IjoxNjk0NTMyNTkxLCJqdGkiOiI3YTU1MTI2NS0yMWM3LTRlOTgtYjJlNC0wNDYxMWY5MDJkYmIiLCJ1c2VybmFtZSI6ImJvc3Rvbi1uYXRpb25hbC00MTVjY2EzMzM2ZjE2Yy04OWM0LTQxNmYtYjY0MC05MjE0YTg5OTIwYzYifQ.VdD0fnwTDAjq6xeH6jKKPuWEDtFKGgK1IaCIuscW1pe_WaK0qWM84rBuRwydGLvRm1306iWaMOkztTrnBj1mrrIJEgMWqxkzUOrWkX0xFeKMYJNclZxLeCKl6Mk7L8QZcBWVw6pULMBJofTGJz5PMpPYpWKdV1FowG8IH9ze0Fnm34tB6tUhY5XzSZaWzu2UTXU7M5dafoVoXt2n-_Cw_gcA1pUZ6ivc1H_QxI7bsR1ryod-ECb58toaxSIPH2h1h-aY9htCQbkc2ytODSbaAhDAvuE07M2a6_CfR9JJoPnGPwcKyDpLkcUszzLlaIFadNCSZoeU6QsB_XZfZ3F3jg",
 							"type": "string"
 						}
 					]
 				},
 				"method": "PUT",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "https://app.sandbox.gridbase.io/v1/orders/place/{{orderId}}",
+					"protocol": "https",
+					"host": [
+						"app",
+						"sandbox",
+						"gridbase",
+						"io"
+					],
+					"path": [
+						"v1",
+						"orders",
+						"place",
+						"{{orderId}}"
+					]
+				}
 			},
 			"response": []
 		},
