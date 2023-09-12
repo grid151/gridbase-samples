@@ -11,7 +11,7 @@
         "buyers": [
             {
                 "firstName": "Fred",
-                "firstName": "Fred",
+                "middleName": "Fred",
                 "lastName": "Burger"
             }
         ],
