@@ -165,6 +165,39 @@ Once done, you can apply the role to mapped user on each (`Resware` and `GridBas
 | TitleReviewNoteRel                | &check; | &check; |         |         |
 | UserRole                          | &check; | &check; |         |         |
 
+You can also apply these more strict permissions using the script below as a template (and replace `[user]` with the actual name of the mapped database user).
+
+```sql
+USE GridBase
+GRANT SELECT,INSERT,UPDATE,DELETE ON SCHEMA::dbo TO [user]
+GO
+
+USE Resware
+GRANT SELECT ON SCHEMA::dbo TO [user]
+GRANT SELECT,INSERT,UPDATE ON dbo.BuyerSeller TO [user]
+GRANT SELECT,INSERT ON dbo.ClosingDisclosureCommonSettlement TO [user]
+GRANT SELECT,INSERT,UPDATE ON dbo.CommonSettlement TO [user]
+GRANT SELECT,INSERT ON dbo.FileActionDocumentRel TO [user]
+GRANT SELECT,INSERT,UPDATE ON dbo.FileActionNoteRel TO [user]
+GRANT SELECT,INSERT,UPDATE ON dbo.FileActions TO [user]
+GRANT SELECT,UPDATE ON dbo.FileMain TO [user]
+GRANT SELECT,INSERT ON dbo.FilePartnerRemoteFile TO [user]
+GRANT SELECT,INSERT,UPDATE ON dbo.FinancialInfo TO [user]
+GRANT SELECT,UPDATE ON dbo.GeneralUser TO [user]
+GRANT SELECT,UPDATE ON dbo.PolicyCurative TO [user]
+GRANT SELECT,INSERT ON dbo.PolicyCurativeDocumentRel TO [user]
+GRANT SELECT,INSERT ON dbo.PolicyCurativeNoteRel TO [user]
+GRANT SELECT,INSERT,UPDATE,DELETE ON dbo.Signing TO [user]
+GRANT SELECT,INSERT ON dbo.SigningDocumentRel TO [user]
+GRANT SELECT,INSERT,UPDATE ON dbo.SigningNotaryFeesRel TO [user]
+GRANT SELECT,INSERT,UPDATE,DELETE ON dbo.SigningPartyRel TO [user]
+GRANT SELECT,UPDATE ON dbo.TitleReview TO [user]
+GRANT SELECT,INSERT ON dbo.TitleReviewDocumentRel TO [user]
+GRANT SELECT,INSERT ON dbo.TitleReviewNoteRel TO [user]
+GRANT SELECT,INSERT ON dbo.UserRole TO [user]
+GO
+```
+
 ## Install Stored Procedures
 
 <span style="color: red;">**IMPORTANT:**</span> Do not apply/execute these scripts in the Resware database!
