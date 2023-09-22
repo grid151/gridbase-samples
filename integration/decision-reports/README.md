@@ -12,7 +12,7 @@ To stage a new order, submit an HTTP POST request to `/v1/orders/stage` using th
 
 | Field Name | Field Description | Requred |
 |---|---|---|
-| `orderDetails.loanNumber` | Your Order ID or Loan/File Number | &check; |
+| `orderDetails.loanNumber` | Your Loan/File Number | &check; |
 | `orderDetails.loanAmount` | The new loan amount | &check; |
 | `orderDetails.salesPrice` | The sale price of the property | &check; |
 | `orderDetails.transactionTypeDesc` | The type of transaction (e.g. "Purchase Loan", "Purchase Cash", "Refinance", etc..) | &check; |
@@ -32,15 +32,15 @@ To stage a new order, submit an HTTP POST request to `/v1/orders/stage` using th
 Once the order is staged, you may then submit a PUT request to `/v1/orders/place/{id}` (where `{id}` is replaced with the order ID returned from the previous request). Note that order placement may take some time to complete
 
 Transaction Types Supported:
-| Transaction Type |
-| --- |
-| 'EquityNC' |
-| 'EquityLV' |
-| 'EquityLastDeed' |
-| 'EquityLastDeedOrLoan' |
-| 'Refinance' |
-| 'Equity' |
-| 'EquityPR' |
+| Transaction Type | Description |
+| --- | --- |
+| 'EquityNC' | Equity - **N**o **C**redit pull |
+| 'EquityLV' | Equity - **L**egal and **V**esting |
+| 'EquityLastDeed' | Equity - Last Deed |
+| 'EquityLastDeedOrLoan' | Equity - Last Deed or Loan |
+| 'Refinance' | Refinance |
+| 'Equity' | Equity |
+| 'EquityPR' | Equity - Property Report |
 
 ## Step 2: Retrieve the Report
 
