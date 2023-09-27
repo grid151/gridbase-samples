@@ -10,22 +10,30 @@ Before you begin, make sure you already have a GridBase sandbox account for deve
 
 To stage a new order, submit an HTTP POST request to `/v1/orders/stage` using the [example request](01_stage.json). This will return a 201 (created) response with the order object you submitted, with the order ID in the `id` property. Fields include:
 
-| Field Name | Field Description | Requred |
-|---|---|---|
-| `orderDetails.loanNumber` | Your Loan/File Number | &check; |
-| `orderDetails.loanAmount` | The new loan amount | &check; |
-| `orderDetails.salesPrice` | The sale price of the property | &check; |
-| `orderDetails.transactionTypeDesc` | The type of transaction (e.g. "Purchase Loan", "Purchase Cash", "Refinance", etc..) | &check; |
-| `parties.buyers[].lastName` | Buyers Last Name | &check; |
-| `parties.buyers[].MiddleName` | Buyers Middle Name | &check; |
-| `parties.buyers[].firstName` | Buyers First Name | &check; |
-| `parties.lender.companyName` | Lender Company Name | &check; |
-| `property.address.street` | Property Address 1 | &check; |
-| `property.address.cityDesc` | Property City/Locality Description | &check; |
-| `property.address.stateId` | Property State | &check; |
-| `property.address.zip` | Property Zip/Postal Code | &check; |
-| `IntegrationId` | `63d3262502157e71998e997b` (for Sandbox environment only) | &check; |
-| `Product` | 'decision-report' | &check; |
+| Field Name                       | Field Description                     | Required |
+|----------------------------------|---------------------------------------|----------|
+| `IntegrationId`                  | Integration ID         | &check;  |
+| `orderDetails.clientFileNumber`  | The client's file number (must be unique)      | &check;  |
+| `orderDetails.newLoanAmount`     | The loan amount                   | &check;  |
+| `orderDetails.newLoanNumber`     | A unique identifier for the new loan  | &check;  |
+| `orderDetails.cashoutAmount`     | Cashout Amount                        | &check;  |
+| `orderDetails.transactionTypeDesc`| Description of the type of transaction| &check;  |
+| `parties.buyers[].buyerSellerTypeID` | Type ID for buyer or seller         | &check;  |
+| `parties.buyers[].firstName`     | Buyer's First Name                    | &check;  |
+| `parties.buyers[].lastName`      | Buyer's Last Name                     | &check;  |
+| `parties.buyers[].address.street`| Street Address of Buyer               | &check;  |
+| `parties.buyers[].address.cityDesc`| City of Buyer                        | &check;  |
+| `parties.buyers[].address.stateId`| State of Buyer                       | &check;  |
+| `parties.buyers[].address.zip`   | Zip code of Buyer                     | &check;  |
+| `parties.lender.lenderId`        | ID for the lender                     |   |
+| `parties.lender.companyName`     | Lender Company Name                   |   |
+| `property.address.street`        | Property Address 1                    | &check;  |
+| `property.address.cityDesc`      | Property City/Locality Description    | &check;  |
+| `property.address.stateId`       | Property State                        | &check;  |
+| `property.address.zip`           | Property Zip/Postal Code              | &check;  |
+| `property.propertyType`          | Type of Property                      | &check;  |
+| `system`                         | System being used (e.g., X1)          | &check;  |
+| `product`                        | Type of product (e.g., order)         | &check;  |
 
 
 
@@ -36,8 +44,6 @@ Transaction Types Supported:
 | --- | --- |
 | 'EquityNC' | Equity - **N**o **C**redit pull |
 | 'EquityLV' | Equity - **L**egal and **V**esting |
-| 'EquityLastDeed' | Equity - Last Deed |
-| 'EquityLastDeedOrLoan' | Equity - Last Deed or Loan |
 | 'Refinance' | Refinance |
 | 'Equity' | Equity |
 | 'EquityPR' | Equity - Property Report |
