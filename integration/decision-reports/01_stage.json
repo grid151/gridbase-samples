@@ -1,28 +1,38 @@
 {
-    "integrationId": "63d3262502157e71998e997b",
-    "orderDetails": {
-        "clientFileNumber": "EX0001",
-        "newLoanAmount": 554321,
-        "newLoanNumber": "EX0001",
-        "salesPrice": 654321,
-        "transactionTypeDesc": "EquityNC"
-    },
-    "parties": {
-        "buyers": [
-            {
-                "firstName": "Fred",
-                "middleName": "Fred",
-                "lastName": "Burger"
-            }
-        ],
-        "contacts": [],
-        "lender": {
-            "companyName": "Bank of America"
+  "orderDetails": {
+    "newLoanAmount": 554321,
+    "newLoanNumber": "678976543",
+    "salesPrice": 654321,
+    "transactionTypeDesc": "EquityNC",
+    "clientFileNumber": "EX0001",
+    "cashoutAmount": 554321
+  },
+  "parties": {
+    "buyers": [
+      {
+        "address": {
+          "street": "1111 Main St",
+          "countyDesc": "Orange",
+          "cityDesc": "Salem",
+          "stateId": "MD",
+          "zip": "34794",
+          "number": "11111",
+          "streetName": "Main St."
         },
-        "sellers": []
-    },
-    "product": "decision-report",
-    "property": {
+        "isPrimary": true,
+        "buyerSellerTypeID": 1,
+        "buyerSellerType": "Individual",
+		"middleName": "Fred",
+        "firstName": "Fred",
+        "lastName": "Burger",
+		"socialSecurityNumber" : "434-45-4543"
+      }
+    ],
+    "lender": {
+      "companyName": "Bank of America"
+    }
+  },
+ "property": {
         "address": {
             "cityDesc": "Bakersfield",
             "countyDesc": "Kern",
@@ -33,5 +43,7 @@
             "zip": "93306"
         },
         "propertyType": "Single Family"
-    }
+   },
+  "system": "X1",
+  "product": "order"
 }
