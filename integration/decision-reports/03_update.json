@@ -64,6 +64,6 @@
         "propertyType" : "Single Family"
     },
     "system": "X1",
-    "product": "decision-report",
+    "product": "decision-report-update",
     "milestones": []
 }
