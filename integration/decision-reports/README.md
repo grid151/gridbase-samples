@@ -39,6 +39,14 @@ To stage a new order, submit an HTTP POST request to `/v1/orders/stage` using th
 
 Once the order is staged, you may then submit a PUT request to `/v1/orders/place/{id}` (where `{id}` is replaced with the order ID returned from the previous request). Note that order placement may take some time to complete
 
+### Product Types:
+
+| Product Type | Description                    |
+| ------------------- | ------------------------------ |
+| decision-report    | For submitting a decision report           |
+| decision-report-resubmit    | For resubmitting a decision report       |
+| decision-report-update      | For updating a decision report     |
+
 Transaction Types Supported:
 | Transaction Type | Description |
 | --- | --- |
@@ -47,6 +55,32 @@ Transaction Types Supported:
 | 'Refinance' | Refinance |
 | 'Equity' | Equity |
 | 'EquityPR' | Equity - Property Report |
+
+### Buyer/Borrower Type Values:
+
+| Buyer/Borrower Type | Description                    |
+| ------------------- | ------------------------------ |
+| Individual          | An individual person           |
+| Corporation         | A corporate entity             |
+| Partnership         | A business partnership         |
+| LLC                 | Limited Liability Company      |
+
+### Property Type Values:
+
+| Property Type          | Description                      |
+| ---------------------- | -------------------------------- |
+| Single Family          | Single-family home               |
+| SFR                    | Single-family residence          |
+| PUD                    | Planned Unit Development         |
+| Condominium            | Condominium                      |
+| Condo                  | Condominium (short form)         |
+| 2-4 Plex               | Property with 2-4 units          |
+| Cooperative            | Co-op housing                    |
+| Unimproved             | Unimproved land                  |
+| Vacant Land            | Empty land                       |
+| Multiple Family Residence | Property with multiple families |
+| Commercial             | Commercial property              |
+| Property               | Generic property type            |
 
 ## Step 2: Retrieve the Report
 
