@@ -39,7 +39,7 @@ To stage a new order, submit an HTTP POST request to `/v1/orders/stage` using th
 
 Once the order is staged, you may then submit a PUT request to `/v1/orders/place/{id}` (where `{id}` is replaced with the order ID returned from the previous request). Note that order placement may take some time to complete
 
-### Product Types:
+Product Types:
 
 | Product Type | Description                    |
 | ------------------- | ------------------------------ |
@@ -56,7 +56,7 @@ Transaction Types Supported:
 | 'Equity' | Equity |
 | 'EquityPR' | Equity - Property Report |
 
-### Buyer/Borrower Type Values:
+Buyer/Borrower Type Values:
 
 | Buyer/Borrower Type | Description                    |
 | ------------------- | ------------------------------ |
@@ -65,7 +65,7 @@ Transaction Types Supported:
 | Partnership         | A business partnership         |
 | LLC                 | Limited Liability Company      |
 
-### Property Type Values:
+Property Type Values:
 
 | Property Type          | Description                      |
 | ---------------------- | -------------------------------- |
@@ -80,7 +80,13 @@ Transaction Types Supported:
 | Vacant Land            | Empty land                       |
 | Multiple Family Residence | Property with multiple families |
 | Commercial             | Commercial property              |
-| Property               | Generic property type            |
+| Mobile Homes           | Mobile homes                     |
+| Apartment              | Apartment building               |
+| Agriculture            | Agricultural land                |
+| Indian Land            | Land designated as Indian land   |
+| Leased Land            | Land that is leased              |
+| Gov't Land             | Government-owned land            |
+| Other                  | Other types of property          |
 
 ## Step 2: Retrieve the Report
 
