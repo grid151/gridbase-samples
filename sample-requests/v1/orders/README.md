@@ -58,6 +58,7 @@ A full [example request](05_document.json) with a base-64 encoded document file 
 Some integrations allow users to send order invitations to individuals outside their organization.  An email will be sent to the provided address, granting access to view the order, add notes, and add documents.  Invitations can be sent by submitting an HTTP POST request to `/v1/core/invitation/send` with a request body like:
 ```json
 {
+    "OrderId": "orderId",
     "Email": "test@email.com",
     "FirstName": "First",
     "LastName": "Last",
