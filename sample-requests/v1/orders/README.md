@@ -53,6 +53,17 @@ New documents can be submitted to the order in the target system by submitting a
 
 A full [example request](05_document.json) with a base-64 encoded document file is available.
 
+### Sending Invitations
+
+Some integrations allow users to send order invitations to individuals outside their organization.  An email will be sent to the provided address, granting access to view the order, add notes, and add documents.  Invitations can be sent by submitting an HTTP POST request to `/v1/core/invitation/send` with a request body like:
+```json
+{
+    "Email": "test@email.com",
+    "FirstName": "First",
+    "LastName": "Last",
+}
+```
+
 ### Notifications to your System
 
 [Web Hooks](https://github.com/grid151/gridbase-samples/tree/main/csharp/webhooks) can be configured to send notifications to your system when events occur on the order in the target system. This can include things like new orders being created, new notes or documents added to the order, or actions taken or completed on the order.
