@@ -10,6 +10,7 @@ This README file describes several API endpoints for using Manual Order Entry, a
 - [Add Document](#add-document)
 - [Add Note](#add-note)
 - [Send Invitation](#send-invitation)
+- [Resend Invitation](#resend-invitation)
 
 
 ## Place Order
@@ -56,6 +57,7 @@ Here is a an [example request body](sample/order.json)
 
 Here is a an [example document upload request body](sample/document.json)
 
+
 ## Add Note
 
 ### Required fields
@@ -76,15 +78,24 @@ Here is a an [example document upload request body](sample/document.json)
 ```
 
 
-### Sending Invitations
+### Send Invitation
 
 Order invitations can be sent to individuals outside the organization.  An email will be sent to the provided address, granting access to view the order, add notes, and add documents.  Invitations can be sent by submitting an HTTP POST request to `/v1/core/invitation/send` with a request body like:
 ```json
 {
-    "OrderId": "orderId",
-    "Email": "test@email.com",
-    "FirstName": "First",
-    "LastName": "Last",
+    "OrderId": "<string>",
+    "Email": "<string>",
+    "FirstName": "<string>",
+    "LastName": "<string>",
 }
 ```
 
+
+### Resend Invitation
+
+Order invitations can be sent to individuals outside the organization.  An email will be sent to the provided address, granting access to view the order, add notes, and add documents.  Invitations can be sent by submitting an HTTP POST request to `/v1/core/invitation/resend` with a request body like:
+```json
+{
+    "InvitationId": "<string>"
+}
+```
