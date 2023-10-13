@@ -93,7 +93,7 @@ Order invitations can be sent to individuals outside the organization.  An email
 
 ### Resend Invitation
 
-Order invitations can be sent to individuals outside the organization.  An email will be sent to the provided address, granting access to view the order, add notes, and add documents.  Invitations can be sent by submitting an HTTP POST request to `/v1/core/invitation/resend` with a request body like:
+Invitations can be resent by submitting an HTTP POST request to `/v1/core/invitation/resend` with a request body like:
 ```json
 {
     "InvitationId": "<string>"
