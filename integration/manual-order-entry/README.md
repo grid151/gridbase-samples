@@ -2,12 +2,15 @@
 
 This README file describes several API endpoints for using Manual Order Entry, an order management feature that allows lenders to place orders in GridBase without a destination integration. The file provides detailed information on the required fields for each endpoint.
 
+
 ## Table of Contents
 
 - [Place Order](#place-order)
 - [Update Order](#update-order)
 - [Add Document](#add-document)
 - [Add Note](#add-note)
+- [Send Invitation](#send-invitation)
+
 
 ## Place Order
 
@@ -51,7 +54,7 @@ Here is a an [example request body](sample/order.json)
 | documentBody | Document as a Base64 string | string |
 | extension | extenstion of the uploaded file txt, pdf, etc | string |
 
-Here is a an [document upload request body](sample/document.json)
+Here is a an [example document upload request body](sample/document.json)
 
 ## Add Note
 
@@ -73,6 +76,15 @@ Here is a an [document upload request body](sample/document.json)
 ```
 
 
-stage
-place
+### Sending Invitations
+
+Order invitations can be sent to individuals outside the organization.  An email will be sent to the provided address, granting access to view the order, add notes, and add documents.  Invitations can be sent by submitting an HTTP POST request to `/v1/core/invitation/send` with a request body like:
+```json
+{
+    "OrderId": "orderId",
+    "Email": "test@email.com",
+    "FirstName": "First",
+    "LastName": "Last",
+}
+```
 
