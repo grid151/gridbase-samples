@@ -1,1 +1,78 @@
+# GridBase Manual Order Entry
+
+This README file describes several API endpoints for using Manual Order Entry, an order management feature that allows lenders to place orders in GridBase without a destination integration. The file provides detailed information on the required fields for each endpoint.
+
+## Table of Contents
+
+- [Place Order](#place-order)
+- [Update Order](#update-order)
+- [Add Document](#add-document)
+- [Add Note](#add-note)
+
+## Place Order
+
+### Required fields
+
+| Field Name | Field Description | Data Type |
+|---|---|---|
+| property.address.street | Property Address 1 | string |
+| property.address.cityDesc | Property City Description | string |
+| property.address.stateId | Property State | string |
+| property.address.zip | Property Zip | string |
+
+### Request body example
+
+Here is a an [example request body](sample/order.json)
+
+
+## Update Order
+
+### Required fields
+
+
+| Field Name | Field Description | Data Type |
+|---|---|---|
+| property.address.street | Property Address 1 | string |
+| property.address.cityDesc | Property City Description | string |
+| property.address.stateId | Property State | string |
+| property.address.zip | Property Zip | string |
+
+
+Here is a an [example request body](sample/order.json)
+
+
+## Add Document
+
+### Required fields
+
+| Field Name | Field Description | Data Type |
+|---|---|---|
+| fileName | Name of file without extension | string |
+| documentBody | Document as a Base64 string | string |
+| extension | extenstion of the uploaded file txt, pdf, etc | string |
+
+Here is a an [document upload request body](sample/document.json)
+
+## Add Note
+
+### Required fields
+
+| Field Name | Field Description | Data Type |
+|---|---|---|
+| noteSubject | Note Subject | string |
+| noteBody | Note Body | string |
+
+### Request body example
+
+```json
+{
+  "noteSubject": "<string>",
+  "noteBody": "<string>",
+  "description": "<string>"
+}
+```
+
+
+stage
+place
 
