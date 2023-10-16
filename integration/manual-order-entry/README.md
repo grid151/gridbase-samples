@@ -1,6 +1,6 @@
 # GridBase Manual Order Entry
 
-This README file describes several API endpoints for using Manual Order Entry, an order management feature that allows lenders to place orders in GridBase without a destination integration. The file provides detailed information on the required fields for each endpoint.
+This README file describes several API endpoints for using Manual Order Entry, an order management feature that allows lenders to place orders in GridBase without a destination integration. This file provides detailed information on the required fields for each endpoint.
 
 
 ## Table of Contents
@@ -19,8 +19,8 @@ This README file describes several API endpoints for using Manual Order Entry, a
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
-| property.address.street | Property Address 1 | string |
-| property.address.cityDesc | Property City Description | string |
+| property.address.street | Property Address | string |
+| property.address.cityDesc | Property City | string |
 | property.address.stateId | Property State | string |
 | property.address.zip | Property Zip | string |
 
