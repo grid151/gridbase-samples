@@ -28,7 +28,7 @@ To stage an order, submit an HTTP POST request to /v1/orders/stage using the exa
 
 ### Request body example
 
-Here is a an [example request body](sample/order.json)
+Here is a [sample request body](sample/order.json)
 
 
 ## Update Order
@@ -44,7 +44,7 @@ Here is a an [example request body](sample/order.json)
 | property.address.zip | Property Zip | string |
 
 
-Here is a an [example request body](sample/order.json)
+Here is a [sample request body](sample/order.json)
 
 
 ## Place Order
@@ -61,7 +61,7 @@ New documents can be attached to a placed order by submitting an HTTP POST reque
 | documentBody | Document as a Base64 string | string |
 | extension | extenstion of the uploaded file txt, pdf, etc | string |
 
-Here is a an [example document upload request body](sample/document.json)
+Here is a [sample document upload request body](sample/document.json)
 
 
 ## Add Note
@@ -73,14 +73,7 @@ New notes can be added to a placed order by submitting an HTTP PUT request to /v
 | noteSubject | Note Subject | string |
 | noteBody | Note Body | string |
 
-### Request body example
-
-```json
-{
-  "noteSubject": "<string>",
-  "noteBody": "<string>"
-}
-```
+Here is a [sample note request body](sample/note.json)
 
 
 ### Send Invitation
@@ -95,14 +88,7 @@ Order invitations can be sent to individuals outside the organization.  An email
 | firstName | First Name | string |
 | lastName | Last Name | string |
 
-```json
-{
-    "OrderId": "<string>",
-    "Email": "<string>",
-    "FirstName": "<string>",
-    "LastName": "<string>",
-}
-```
+Here is a [sample invitation request body](sample/note.json)
 
 
 ### Resend Invitation
