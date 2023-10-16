@@ -12,6 +12,9 @@ This README file describes several API endpoints for using Manual Order Entry, a
 - [Add Document](#add-document)
 - [Send Invitation](#send-invitation)
 - [Resend Invitation](#resend-invitation)
+- [Edit Invitation](#edit-invitation)
+- [Enabe/Disable Invitation](#enable/disable-invitation)
+- [Order Update Notifications](#order-update-notifications)
 
 
 ## Stage Order
@@ -123,8 +126,8 @@ Order invitations can be enabled or disabled by submitting an HTTP PATCH request
 ```
 
 
-## Invitation Email Updates
-Invitees may receive update emails when notes or documents are added to the order by a member of the creating organzation.  This flag can
+## Order Update Notifications
+Invitees may receive order update email notifications when notes or documents are added to the order by a member of the creating organzation.  This flag can
 be toggled by submitting an HTTP PATCH request to `/v1/core/invitation/update` with a request body like:
 
 ```json
