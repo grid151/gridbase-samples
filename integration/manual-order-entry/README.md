@@ -8,8 +8,8 @@ This README file describes several API endpoints for using Manual Order Entry, a
 - [Stage Order](#stage-order)
 - [Update Order](#update-order)
 - [Place Order](#place-order)
-- [Add Document](#add-document)
 - [Add Note](#add-note)
+- [Add Document](#add-document)
 - [Send Invitation](#send-invitation)
 - [Resend Invitation](#resend-invitation)
 
@@ -51,6 +51,18 @@ Here is a [sample request body](sample/order.json)
  Once staged, you can place the order by submitting an HTTP PUT requests to /v1/orders/place/{orderId}.
 
 
+## Add Note
+New notes can be added to a placed order by submitting an HTTP PUT request to /v1/notes/add/{orderId}.
+### Required fields
+
+| Field Name | Field Description | Data Type |
+|---|---|---|
+| noteSubject | Note Subject | string |
+| noteBody | Note Body | string |
+
+Here is a [sample note request body](sample/note.json)
+
+
 ## Add Document
 New documents can be attached to a placed order by submitting an HTTP POST request to /v1/documents/create/{orderId}.
 ### Required fields
@@ -62,18 +74,6 @@ New documents can be attached to a placed order by submitting an HTTP POST reque
 | extension | extenstion of the uploaded file txt, pdf, etc | string |
 
 Here is a [sample document upload request body](sample/document.json)
-
-
-## Add Note
-New notes can be added to a placed order by submitting an HTTP PUT request to /v1/notes/add/{orderId}.
-### Required fields
-
-| Field Name | Field Description | Data Type |
-|---|---|---|
-| noteSubject | Note Subject | string |
-| noteBody | Note Body | string |
-
-Here is a [sample note request body](sample/note.json)
 
 
 ### Send Invitation
@@ -96,6 +96,6 @@ Here is a [sample invitation request body](sample/note.json)
 Invitations can be resent by submitting an HTTP POST request to `/v1/core/invitation/resend` with a request body like:
 ```json
 {
-    "InvitationId": "<string>"
+    "invitationId": "<string>"
 }
 ```
