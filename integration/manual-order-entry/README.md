@@ -52,7 +52,7 @@ Here is a an [example request body](sample/order.json)
 
 
 ## Add Document
-New documents can be attached to the order by submitting an HTTP POST request to /v1/documents/create/{orderId}.
+New documents can be attached to a placed order by submitting an HTTP POST request to /v1/documents/create/{orderId}.
 ### Required fields
 
 | Field Name | Field Description | Data Type |
@@ -65,7 +65,7 @@ Here is a an [example document upload request body](sample/document.json)
 
 
 ## Add Note
-New notes can be added to the order by submitting an HTTP PUT request to /v1/notes/add/{orderId}.
+New notes can be added to a placed order by submitting an HTTP PUT request to /v1/notes/add/{orderId}.
 ### Required fields
 
 | Field Name | Field Description | Data Type |
