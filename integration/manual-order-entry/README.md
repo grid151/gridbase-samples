@@ -13,7 +13,7 @@ This README file describes several API endpoints for using Manual Order Entry, a
 - [Send Invitation](#send-invitation)
 - [Resend Invitation](#resend-invitation)
 - [Edit Invitation](#edit-invitation)
-- [Enable/Disable Invitation](#enable-disable-invitation)
+- [Disable Invitation](#disable-invitation)
 - [Order Update Notifications](#order-update-notifications)
 
 
@@ -114,7 +114,7 @@ Invitations names can be updated by submitting an HTTP PATCH request to `/v1/cor
 ```
 
 
-## Enable/Disable Invitation
+## Disable Invitation
 Order invitations can be enabled or disabled by submitting an HTTP PATCH request to `/v1/core/invitation/update` with a request body like:
 
 ```json
