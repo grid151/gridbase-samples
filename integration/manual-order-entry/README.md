@@ -5,15 +5,17 @@ This README file describes several API endpoints for using Manual Order Entry, a
 
 ## Table of Contents
 
-- [Place Order](#place-order)
+- [Stage Order](#stage-order)
 - [Update Order](#update-order)
+- [Place Order](#place-order)
 - [Add Document](#add-document)
 - [Add Note](#add-note)
 - [Send Invitation](#send-invitation)
 - [Resend Invitation](#resend-invitation)
 
 
-## Place Order
+## Stage Order
+To stage an order, submit an HTTP POST request to /v1/orders/stage using the example request.
 
 ### Required fields
 
@@ -30,7 +32,7 @@ Here is a an [example request body](sample/order.json)
 
 
 ## Update Order
-
+ Once staged, you may optionally update the order object by submitting an HTTP PUT requests to /v1/orders/update.
 ### Required fields
 
 
@@ -45,8 +47,12 @@ Here is a an [example request body](sample/order.json)
 Here is a an [example request body](sample/order.json)
 
 
-## Add Document
+## Place Order
+ Once staged, you can place the order by submitting an HTTP PUT requests to /v1/orders/place/{orderId}.
 
+
+## Add Document
+New documents can be attached to the order by submitting an HTTP POST request to /v1/documents/create/{orderId}.
 ### Required fields
 
 | Field Name | Field Description | Data Type |
@@ -59,7 +65,7 @@ Here is a an [example document upload request body](sample/document.json)
 
 
 ## Add Note
-
+New notes can be added to the order by submitting an HTTP PUT request to /v1/notes/add/{orderId}.
 ### Required fields
 
 | Field Name | Field Description | Data Type |
@@ -72,15 +78,23 @@ Here is a an [example document upload request body](sample/document.json)
 ```json
 {
   "noteSubject": "<string>",
-  "noteBody": "<string>",
-  "description": "<string>"
+  "noteBody": "<string>"
 }
 ```
 
 
 ### Send Invitation
 
-Order invitations can be sent to individuals outside the organization.  An email will be sent to the provided address, granting access to view the order, add notes, and add documents.  Invitations can be sent by submitting an HTTP POST request to `/v1/core/invitation/send` with a request body like:
+Order invitations can be sent to individuals outside the organization.  An email will be sent to the provided address, granting access to view the order, add notes, and add documents.  Invitations can be sent by submitting an HTTP POST request to `/v1/core/invitation/send`.
+### Required fields
+
+| Field Name | Field Description | Data Type |
+|---|---|---|
+| orderId | Order Id | string |
+| email | Email Address | string |
+| firstName | First Name | string |
+| lastName | Last Name | string |
+
 ```json
 {
     "OrderId": "<string>",
