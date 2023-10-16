@@ -13,7 +13,7 @@ This README file describes several API endpoints for using Manual Order Entry, a
 - [Send Invitation](#send-invitation)
 - [Resend Invitation](#resend-invitation)
 - [Edit Invitation](#edit-invitation)
-- [Enabe/Disable Invitation](#enable/disable-invitation)
+- [Enable/Disable Invitation](#enable-disable-invitation)
 - [Order Update Notifications](#order-update-notifications)
 
 
