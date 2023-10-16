@@ -36,8 +36,8 @@ Here is a an [example request body](sample/order.json)
 
 | Field Name | Field Description | Data Type |
 |---|---|---|
-| property.address.street | Property Address 1 | string |
-| property.address.cityDesc | Property City Description | string |
+| property.address.street | Property Address | string |
+| property.address.cityDesc | Property City | string |
 | property.address.stateId | Property State | string |
 | property.address.zip | Property Zip | string |
 
