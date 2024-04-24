@@ -4,7 +4,7 @@
 public class OrderPlacedData
 {
     /// <summary>The GridBase Order ID for which placement was attempted.</summary>
-    public string Id { get; set; } = string.Empty;
+    public string OrderId { get; set; } = string.Empty;
 
     /// <summary>The outcome of order placement: "success" or "failed"</summary>
     public string Status { get; set; } = string.Empty;

@@ -27,7 +27,7 @@ public class WebhookController : ControllerBase
     public IActionResult OrderPlaced(OrderPlacedData input)
     {
         //TODO: Update the second argument when calling VerifySignature to match the Secret Key configured for this endpoint in GridBase / Developer / Web Hooks
-        if (!VerifySignature(input, "********************************************"))
+        if (!VerifySignature(input, "DcDbIZ+RhkVsts462AEECJhB1Db8RBppJTLlOcWIcg0="))
         {
             return Unauthorized();
         }
@@ -73,7 +73,7 @@ public class WebhookController : ControllerBase
         try
         {
             //TODO: Update the second argument when calling VerifySignature to match the Secret Key configured for this endpoint in GridBase / Developer / Web Hooks
-            if (!VerifySignature(input, "********************************************"))
+            if (!VerifySignature(input, "s0A8pdK2k1bRyyUyoDPOuQvsVnfCo3OSIceQB9NofzA="))
             {
                 return Unauthorized();
             }
@@ -99,7 +99,7 @@ public class WebhookController : ControllerBase
         try
         {
             //TODO: Update the second argument when calling VerifySignature to match the Secret Key configured for this endpoint in GridBase / Developer / Web Hooks
-            if (!VerifySignature(input, "********************************************"))
+            if (!VerifySignature(input, "Iwog0OlzyVSLA1yUCovVqKX7EM1EWvJNfRZ0XUf1ZSI="))
             {
                 return Unauthorized();
             }
